@@ -1025,7 +1025,7 @@ public final class IndexSchema {
      for (DynamicField df : dynamicFields) {
       if (df.matches(fieldName)) return df.prototype.getType();
     }
-    throw new SolrException( SolrException.ErrorCode.BAD_REQUEST,"undefined field "+fieldName);
+    throw new SolrException( SolrException.ErrorCode.BAD_REQUEST,"undefined field: " + "\"" + fieldName + "\".");
   }
 
   private FieldType dynFieldType(String fieldName) {
